@@ -16,6 +16,10 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Testing'
+        withGradle() {
+          sh './gradlew test'
+        }
+
       }
     }
 
