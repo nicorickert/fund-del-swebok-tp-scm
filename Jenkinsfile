@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
-        git(url: 'https://github.com/nicorickert/ids-fund-del-swebok-tp-scm', branch: 'master', changelog: true)
+        git(url: 'https://github.com/nicorickert/ids-fund-del-swebok-tp-scm', branch: 'master')
         withGradle() {
           sh './gradlew build'
           sh './gradlew bootRun'
