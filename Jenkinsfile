@@ -6,8 +6,8 @@ pipeline {
         echo 'Building'
         git(url: 'https://github.com/nicorickert/ids-fund-del-swebok-tp-scm', branch: 'master', changelog: true)
         withGradle() {
-          sh '''./gradlew build
-./gradlew bootRun'''
+          sh './gradlew build'
+          sh './gradlew bootRun'
         }
 
       }
